@@ -1,0 +1,198 @@
+/* Reset & Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+  background: linear-gradient(135deg, #d7ccc8 0%, #efebe9 100%); /* 따뜻한 브라운/베이지 그라데이션 */
+  color: #3e2723;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+
+/* Layout */
+.container {
+  width: 100%;
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #4e342e;
+}
+
+header p {
+  font-size: 1rem;
+  color: #5d4037;
+}
+
+/* Cards */
+.card {
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 32px rgba(93, 64, 55, 0.1);
+}
+
+.input-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+textarea {
+  width: 100%;
+  height: 120px;
+  padding: 16px;
+  border: 1px solid #d7ccc8;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+  outline: none;
+  background-color: #fafafa;
+  color: #3e2723;
+  transition: border-color 0.2s ease;
+}
+
+textarea:focus {
+  border-color: #8d6e63;
+}
+
+.char-count {
+  text-align: right;
+  font-size: 0.85rem;
+  color: #8d6e63;
+}
+
+button {
+  background-color: #6d4c41;
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background-color: #5d4037;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:disabled {
+  background-color: #a1887f;
+  cursor: not-allowed;
+}
+
+/* Error Box */
+.error-box {
+  background-color: #ffebee;
+  color: #c62828;
+  padding: 16px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  border: 1px solid #ffcdd2;
+  text-align: center;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Result Card */
+.result-card h2 {
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+  color: #4e342e;
+}
+
+.result-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.badge {
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+}
+
+.badge.positive {
+  background-color: #4caf50;
+}
+
+.badge.negative {
+  background-color: #f44336;
+}
+
+.badge.neutral {
+  background-color: #9e9e9e;
+}
+
+.confidence {
+  font-size: 0.95rem;
+  color: #5d4037;
+  font-weight: 500;
+}
+
+.reason-box {
+  background-color: rgba(215, 204, 200, 0.3);
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.reason-box h3 {
+  font-size: 1rem;
+  color: #5d4037;
+  margin-bottom: 8px;
+}
+
+.reason-box p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #4e342e;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .card {
+    padding: 20px;
+  }
+  
+  button {
+    width: 100%;
+  }
+}

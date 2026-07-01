@@ -74,7 +74,7 @@ const server = http.createServer((req, res) => {
   }
 
   // 정적 파일(화면 HTML, CSS, JS) 서빙 로직
-  let filePath = path.join(__dirname, 'public', req.url === '/' ? 'index.html' : req.url);
+  let filePath = path.join(__dirname, req.url === '/' ? 'index.html' : req.url);
   const extname = String(path.extname(filePath)).toLowerCase();
   const contentType = mimeTypes[extname] || 'application/octet-stream';
 
