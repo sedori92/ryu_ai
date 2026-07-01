@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <!-- 한글이 깨지지 않도록 문자 인코딩을 UTF-8로 설정합니다. -->
+  <meta charset="UTF-8">
+
+  <!-- 모바일 화면에서도 페이지가 알맞은 크기로 보이게 합니다. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>API 기본 실습</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="page">
+    <section class="box">
+      <h1>API 기본 실습</h1>
+      <p>fetch()와 async/await으로 외부 데이터를 가져옵니다.</p>
+
+      <!-- 버튼을 클릭하면 JavaScript에서 API 요청을 실행합니다. -->
+      <button id="loadPostBtn" class="btn" type="button">데이터 가져오기</button>
+
+      <!-- API 응답 결과를 화면에 표시할 영역입니다. -->
+      <div id="result" class="result-box">
+        결과가 여기에 표시됩니다.
+      </div>
+    </section>
+  </main>
+  <script src="js/01_fetch.js"></script>
+</body>
+</html>
