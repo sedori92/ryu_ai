@@ -4,10 +4,7 @@
   "description": "AI 감성 분석기",
   "main": "api/analyze.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
-  "dependencies": {
-    "@supabase/supabase-js": "^2.39.3",
-    "openai": "^4.24.1"
-  }
+  "dependencies": {}
 }
